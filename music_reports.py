@@ -50,7 +50,7 @@ def main():
             print("\n Goodbye")
             break 
         elif user_input !="":
-            print("\n Not Valid Choice Try again")            
+            print("\n *****Not Valid Choice Try again*****")            
 
 
 if __name__ == "__main__":
