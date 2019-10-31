@@ -38,8 +38,11 @@ def search_album():
 def search_genre():
     user_input = input('Write genre ')
     list = import_music()
-    for x in list:
-        if x[3] == user_input:
-            print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration: {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
-
+    try:
+        for x in list:
+            if x[3].lower() == user_input.lower():
+                print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration: {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
+    except:
+        print("Ceva")
+        search_genre()
 
