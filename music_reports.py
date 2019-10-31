@@ -3,7 +3,7 @@ import os
 
 
 
-def meniu():
+def main():
     while True:
         print("""\t\t MENIU
         
@@ -53,4 +53,5 @@ def meniu():
             print("\n Not Valid Choice Try again")            
 
 
-meniu()
+if __name__ == "__main__":
+    main()

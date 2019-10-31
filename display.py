@@ -23,7 +23,7 @@ def search_artist():
     user_input = input("Write artist ")
     lista = import_music()
     for x in lista:
-        if x[0] == user_input:
+        if x[0].lower() == user_input.lower():
             print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
 
 
@@ -31,18 +31,13 @@ def search_album():
     user_input = input('Write album ')
     lista = import_music()
     for x in lista:
-        if x[1] == user_input:
+        if x[1].lower() == user_input.lower():
             print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
 
 
 def search_genre():
     user_input = input('Write genre ')
     list = import_music()
-    try:
-        for x in list:
-            if x[3].lower() == user_input.lower():
-                print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration: {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
-    except:
-        print("Ceva")
-        search_genre()
-
+    for x in list:
+        if x[3].lower() == user_input.lower():
+            print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration: {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
