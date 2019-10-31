@@ -19,9 +19,7 @@ def display_albums():
         print(i+1, data)
 
 
-display_albums()
-# As a user I want to find all albums created by given artist
-print("\n**********")
+
 
 
     
@@ -32,29 +30,26 @@ def search_artist():
             print('Artisit: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
 
 
-search_artist()
 
 # As a user I want to find album by album name
 
-def search_album():
+def search_alb64utum():
     lista = import_music()
     for x in lista:
         if x[1] == "Boston":
             print('Artisit: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
         
-search_album()
+
 
 
 # As a user I want to find album by album name
 
 def search_album():
-    nume = input('SCrie albumu')
+    nume = input('What album are you looking for? ')
     lista = import_music()
     for x in lista:
         if x[1] == nume:
             print('Artisit: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
 
        
-search_album()
 
-print(import_music())
