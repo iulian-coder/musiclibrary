@@ -36,13 +36,17 @@ def meniu():
             print("\n Under Construction")
         elif user_input =="4":
             print("\n Under Construction")
-        elif user_input =="5":
-            print("\n Ceva Record Found")
-        elif user_input =="6":
-            print("\n Ceva Record Found")
-        elif user_input =="7":
-            print("\n Ceva Record Found")    
-        elif user_input =="8":
+        elif user_input == "5":
+            search_artist()
+            input("Press enter to continue...")
+            os.system("clear")
+        elif user_input == "6":
+            search_album()
+            input("Press enter to continue...")
+            os.system("clear")
+        elif user_input == "7":
+            print("\n Under Construction")    
+        elif user_input == "8":
             print("\n Goodbye")
             break 
         elif user_input !="":
