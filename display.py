@@ -22,17 +22,23 @@ def display_albums():
 def search_artist():
     user_input = input("Write artist ")
     list = import_music()
-    for x in list:
-        if x[0].lower() == user_input.lower():
-            print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
+    if any(user_input in s for s in list):
+        for x in list:
+            if x[0].lower() == user_input.lower():
+                print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
+    else:
+        print(f"You don't have this {user_input} artist")
 
 
 def search_album():
     user_input = input('Write album ')
     list = import_music()
-    for x in list:
-        if x[1].lower() == user_input.lower():
-            print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
+    if any(user_input in s for s in list):
+        for x in list:
+            if x[1].lower() == user_input.lower():
+                print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
+    else:
+        print(f"You don't have this {user_input} album")
 
 
 def search_genre():
@@ -44,4 +50,3 @@ def search_genre():
                 print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration: {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
     else:
         print(f"You don't have this {user_input} genre")
-

@@ -13,10 +13,10 @@ def main():
         4. Find shortest/longest album (Under Construction)
         5. Find all albums created by given artist
         6. Find album by album name
-        7. Full Report
+        7. Full Report (Under Construction)
         8. Exit/Quit
 
-        \t\t SPECIAL
+        \tSPECIAL
 
         9. View similar music by genres (Under Construction)
        10. Add new album (Under Construction)
