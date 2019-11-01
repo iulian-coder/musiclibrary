@@ -10,7 +10,7 @@ def main():
         1. View all imported albums
         2. Find all albums by genre
         3. Find all albums from given time range (Under Construction)
-        4. Find shortest/longest album (Under Construction)
+        4. Find shortest/longest album
         5. Find all albums created by given artist
         6. Find album by album name
         7. Full Report (Under Construction)
@@ -35,8 +35,11 @@ def main():
             os.system("clear")
         elif user_input == "3":
             print("\n Under Construction")
-        elif user_input =="4":
-            print("\n Under Construction")
+        elif user_input == "4":
+            user_input2 = input("Choose shortest or longest   ")
+            findShortest(user_input2)
+            input("\nPress enter to continue...")
+            os.system("clear")            
         elif user_input == "5":
             search_artist()
             input("\nPress enter to continue...")

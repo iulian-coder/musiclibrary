@@ -50,3 +50,16 @@ def search_genre():
     else:
         print(f"You don't have this {user_input} genre")
 
+
+def getDuration(album):
+    (mm, ss) = album[-1].split(':')
+    return int(mm) * 60 + int(ss)
+
+
+def findShortest(criteria="shortest"):
+    albums = import_music()
+    lst = sorted(albums, key=lambda x: getDuration(x))
+    if criteria == 'longest':
+        print(lst[-1])
+    else:
+        print(lst[0])
