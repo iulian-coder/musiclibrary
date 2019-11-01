@@ -5,7 +5,7 @@ import os
 
 def main():
     while True:
-        print("""\t\t MENIU
+        print("""\t\t ************ MENIU ************
         
         1. View all imported albums
         2. Find all albums by genre
@@ -16,7 +16,7 @@ def main():
         7. Full Report (Under Construction)
         8. Exit/Quit
 
-        \tSPECIAL
+        \t************ SPECIAL ************
 
         9. View similar music by genres (Under Construction)
        10. Add new album (Under Construction)
@@ -24,13 +24,14 @@ def main():
        12. Export album to external file - Under Construction """)
 
         user_input = input("\nWhat would you like to do? ")
+        os.system("clear")
         if user_input == "1":
             display_albums()
-            input("Press enter to continue...")
+            input("\nPress enter to continue...")
             os.system("clear")
         elif user_input == "2":
             search_genre()
-            input("Press enter to continue...")
+            input("\nPress enter to continue...")
             os.system("clear")
         elif user_input == "3":
             print("\n Under Construction")
@@ -38,11 +39,11 @@ def main():
             print("\n Under Construction")
         elif user_input == "5":
             search_artist()
-            input("Press enter to continue...")
+            input("\nPress enter to continue...")
             os.system("clear")
         elif user_input == "6":
             search_album()
-            input("Press enter to continue...")
+            input("\nPress enter to continue...")
             os.system("clear")
         elif user_input == "7":
             print("\n Under Construction")    

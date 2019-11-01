@@ -40,13 +40,13 @@ def search_album():
     else:
         print(f"You don't have this {user_input} album")
 
-
 def search_genre():
     user_input = input('Write genre ')
     list = import_music()
-    if any(user_input in s for s in list):
+    if any(user_input.lower() in s for s in list):
         for x in list:
             if x[3].lower() == user_input.lower():
-                print('\nArtist: {}\nAlbum: {}\nRelease Year: {}\nGenre: {}\nDuration: {}\n'.format(x[0], x[1], x[2], x[3], x[4]))
+                print(f'\nArtist: {x[0]}\nAlbum: {x[1]}\nRelease Year: {x[2]}\nGenre: {x[3]}\nDuration: {x[4]}\n')
     else:
         print(f"You don't have this {user_input} genre")
+
